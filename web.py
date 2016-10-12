@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 import giphypop
 app = Flask(__name__)
@@ -26,4 +27,5 @@ def results():
     responses = get_gif(term)
     return render_template('results.html', responses=responses)
 
-app.run(debug=True)
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
