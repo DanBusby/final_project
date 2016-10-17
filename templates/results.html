@@ -25,20 +25,37 @@
         <!-- Jumbotron -->
         <div class="jumbotron">
             <div class="container">
-                <h1>GIFs tagged with "cats"</h1>
+                <h1>{{ reply }}</h1>
                 <a href="/">Back to search</a>
             </div>
         </div>
 
         <!-- GIF Search Results -->
+    
+        {% for response in responses %}
+            {{ response.media_url }}
+            {{ response.url }}
+        {% endfor %}
+
+
         <div class="container">
             <div class="card-columns">
-            
+
+
                 <div class="card">
-                  <a href="http://giphy.com/gifs/love-cat-cats-26uf9IAZN7JvvYbwA" target="_blank">
-                    <img class="card-img-top" src="http://media3.giphy.com/media/26uf9IAZN7JvvYbwA/giphy.gif" style="width:100%; height:auto;">
+                  <a href="" target="_blank">
+                    <img class="card-img-top" src="" style="width:100%; height:auto;">
                 </a>
                 </div>
+
+                
+
+       
+
+                  <!-- <a href="http://giphy.com/gifs/love-cat-cats-26uf9IAZN7JvvYbwA" target="_blank">
+                    <img class="card-img-top" src="http://media3.giphy.com/media/26uf9IAZN7JvvYbwA/giphy.gif" style="width:100%; height:auto;">
+                </a>
+                </div> -->
             
                 <div class="card">
                   <a href="http://giphy.com/gifs/cat-judgemental-judgey-26uf5hiFbD0DdZdGo" target="_blank">
