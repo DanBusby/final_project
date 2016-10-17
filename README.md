@@ -1,5 +1,5 @@
-# Intro to Programming with Python
+# Dan and Connor's Final Project
 
-This is a sample application
+This is Dan and Connor's final project for Intro to Programming using Python at Columbia Business School
 
-by [Dan Busby](http://google.com)
+by Dan Busby and Connor Bogin
