@@ -4,15 +4,16 @@ import giphypop
 app = Flask(__name__)
 g = giphypop.Giphy()
 
+
 # def get_gif(term):
 #     responses = g.search(term)
-#     for response in responses:
-#         return(response.media_url)
-#         return(response.url)
+#     # for response in responses:
+#     #     return(response.media_url)
+#     #     return(response.url)
   
 @app.route('/')
 def index():
-    name = request.values.get('name', 'Nobody')
+    name = request.values.get('name', 'You Sexy Beast')
     greeting = "Hello {}".format(name)
     return render_template('index.html', greeting=greeting)
 
@@ -23,8 +24,8 @@ def about():
 @app.route('/results')
 def results():
     term = request.values.get('term') 
-    responses= g.search(term)
-    reply = "GIFs tagged with {}".format(term)
+    responses = g.search(term)
+    reply = 'GIFs tagged with "{}"'.format(term)
     return render_template('results.html', responses=responses, reply=reply)
 
 # @app.route('/results')
